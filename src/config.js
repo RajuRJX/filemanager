@@ -1,19 +1,20 @@
 // config.js
 const mongoose = require("mongoose");
 
-const connect = mongoose.connect("mongodb://127.0.0.1:27017/Login-tut", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-// Check database connected or not
-connect
-  .then(() => {
+async function connectToDatabase() {
+  try {
+    await mongoose.connect("mongodb://localhost:27017/Login-tut", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("Database Connected Successfully");
-  })
-  .catch(() => {
-    console.log("Database cannot be Connected");
-  });
+  } catch (error) {
+    console.error("Error connecting to the database:", error);
+  }
+}
+
+connectToDatabase();
+
 
 // Create Schema
 const userSchema = new mongoose.Schema({
