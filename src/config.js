@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 async function connectToDatabase() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/Login-tut", {
+    await mongoose.connect("mongodb://192.168.0.102:27017/Login-tut", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
