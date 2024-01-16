@@ -1,0 +1,144 @@
+
+
+/* General styling */
+html, body {
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50; /* Charcoal gray text */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #5352ed, #ff4757);
+}
+
+/* Flash messages */
+.flash-message {
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #ff9f43, #f368e0); /* Orange to purple gradient */
+}
+
+/* Header section */
+.header {
+  color: #fff;
+  padding: 15px 0; /* Increased padding for header */
+}
+
+.header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Container styling */
+.container {
+  position: relative; /* Set container position to relative for absolute positioning */
+  width: 90%;
+  margin-top: 0px;
+  margin: 20px auto;
+  background: #1e272e; /* Dark blue-gray background */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.flash-message {
+  margin-bottom: 0; /* Remove margin bottom */
+}
+
+
+.container h2 {
+  margin-top: 0;
+  color: white;
+}
+
+/* Upload section */
+.upload-section,
+.file-list-section {
+  margin-bottom: 20px;
+}
+
+.upload-section h3,
+.file-list-section h3 {
+  border-bottom: 1px solid #485460; /* Dark gray border */
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+label,
+input {
+  color: white;
+}
+
+/* File List styling */
+.file-list-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list-section li {
+  background: #1e272e; /* Dark blue-gray background */
+  margin-bottom: 5px;
+  padding: 10px;
+  border-left: 4px solid #5352ed; /* Purple border */
+}
+
+.file-list-section a {
+  text-decoration: none;
+  color: #fff; /* White text */
+}
+
+.file-list-section a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background-color: #3498db; /* Blue background */
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Search bar styling */
+.search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 12px;
+  width: 40%; /* Slightly larger search bar */
+  border: 1px solid #485460; /* Dark gray border */
+  margin-right: 10px;
+  border-radius: 10px;
+  background:white; /* Dark gray background */
+  color: #fff; /* White text */
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #27ae60; /* Green background */
+  color: #fff;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.search-bar button:hover {
+  background-color: #218c53; /* Darker green on hover */
+}

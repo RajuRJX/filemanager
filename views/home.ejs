@@ -1,0 +1,54 @@
+<!-- home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/home.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Your File Manager</h1>
+      <% if (messages.success) { %>
+      <p class="flash-message success"><%= messages.success %></p>
+      <% } else if (messages.error) { %>
+      <p class="flash-message error"><%= messages.error %></p>
+      <% } %>
+      <div class="search-bar">
+        <form action="/search" method="get">
+          <input type="text" name="keyword" id="placeholder" ="Search files" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Welcome, <%= username %>!</h2>
+
+      <div class="upload-section">
+        <h3>Upload a File</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <label for="file">Choose a file:</label>
+          <input type="file" id="file" name="file" required />
+          <button type="submit">Upload</button>
+        </form>
+      </div>
+
+      <div class="file-list-section">
+        <h3>Your Files</h3>
+        <% if (files && files.length > 0) { %>
+        <ul>
+          <% files.forEach(file => { %>
+          <li>
+            <a href="/view/<%= file %>" target="_blank"><%= file %></a>
+          </li>
+          <% }); %>
+        </ul>
+        <% } else { %>
+        <p>No files uploaded yet.</p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
